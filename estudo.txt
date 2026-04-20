@@ -1,2 +1,3 @@
 Estudando Git e DevOps  
-Adicionando a data de hoje.
+Teste 2
+Teste 3
