@@ -1,0 +1,25 @@
+name: CI-CD-Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Continuous Integration (CI)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run unit tests
+        run: echo "Executando testes de qualidade..."
+
+  deploy:
+    name: Continuous Delivery (CD)
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Production
+        run: echo "Realizando o deploy do projeto..."
