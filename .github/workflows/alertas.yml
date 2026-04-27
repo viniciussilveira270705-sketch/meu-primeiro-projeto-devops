@@ -8,5 +8,5 @@ jobs:
       - name: Mandar Mensagem
         uses: appleboy/discord-action@master
         with:
-          webhook_id: ${{ secrets.DISCORD_WEBHOOK }}
-          message: " Alerta da Semana 6: Vinicius, seu código foi enviado com sucesso!"
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
+          message: " Alerta da Semana 6: Vinicius, seu pipeline de monitoramento está ativo!"
