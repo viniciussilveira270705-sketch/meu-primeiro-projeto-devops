@@ -1,0 +1,12 @@
+name: Alerta Discord
+on: [push]
+
+jobs:
+  envio-alerta:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mandar Mensagem
+        uses: appleboy/discord-action@master
+        with:
+          webhook_id: ${{ secrets.DISCORD_WEBHOOK }}
+          message: " Alerta da Semana 6: Vinicius, seu código foi enviado com sucesso!"
